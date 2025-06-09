@@ -21,8 +21,8 @@ def salvar_arquivo():
     data_agora = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") 
     caminho_salvamento = r'C:\Users\Users\Downloads\Planilha_' + data_agora + '.xlsx'
     print('Salvando o novo arquivo em xlsx')
-    df_monitor = pd.read_excel(caminho_arquivo)
-    df_monitor.to_excel(caminho_salvamento, index=False)
+    df = pd.read_excel(caminho_arquivo)
+    df.to_excel(caminho_salvamento, index=False)
     print(f'Arquivo salvo em: {caminho_salvamento}')
     time.sleep(30)
     os.remove(caminho_arquivo)
